@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -20,7 +20,7 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Choose an applicable license',
-        choices: ('MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3', 'none'),
+        choices: ['MIT', 'APACHE2.0', 'Boost1.0', 'MPL2.0', 'BSD2', 'BSD3', 'none'],
     },
     {
         type: 'input',
@@ -30,11 +30,11 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Which languages or technologies are used for this project?'
+        message: 'Provide instructions and examples for use?'
     },
     {
         type: 'input',
-        name: 'creator',
+        name: 'github',
         message: 'Write your GitHub username',
     },
     {
@@ -60,14 +60,14 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
-    inquirer.prompt(questions).then((response) => {
+    inquirer.prompt(questions).then((responses) => {
         console.log('Creating Professional README.md File...');
         writeToFile('./dist/README.md', generateMarkdown({...responses}));
     });

@@ -35,8 +35,7 @@ function generateMarkdown(data) {
   * [Description](#description)
   * [Requirements](#requirements)
   * [Usage](#usage)
-  //  TODO: questions link is broken in table of contents - FIX
-  * [Questions](#questions?-here-is-how-to-contact-me)
+  * [Questions](#questions)
   * [Contributors](#contributors)
   * [Testing](#testing)
   ${renderLicenseLink(data.license)}
@@ -46,7 +45,8 @@ function generateMarkdown(data) {
   ${data.require}
   ## Usage
   ${data.usage}
-  ## Questions? - Here is how to contact me
+  ## Questions
+  - Here is how to contact me with questions -
   * Name - ${data.name}
   * Email - ${data.email}
   * GitHub - [${data.github}](https://github.com/${data.github}/)

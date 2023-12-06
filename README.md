@@ -10,7 +10,7 @@ README generator with Node.JS
   ## Usage
   Open terminal in index.js and use node.js to start the program. Answer the series of questions then see created README.md file in the 'dist' folder. Open preview to see your professional README!
 
-  Here is a link to a short video demonstration ==>  ![Demo Video](./Develop/video/README%20Generator%20Demo.webm)
+  Here is a link to a short video demonstration ==>  [README Generator Demo.webm](https://github.com/ANelson44/readme-generator/assets/145131926/b1cc98f8-8325-4513-a047-742092db4d09)
 
   ## Questions
   - Here is how to contact me with questions -
